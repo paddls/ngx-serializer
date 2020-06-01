@@ -1,27 +1,55 @@
 # NgxSerializer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+![ts-serializer-ci](https://github.com/witty-services/tngxserializer/workflows/build/badge.svg?branch=master)
+[![npm version](https://badge.fury.io/js/%40witty-services%2Fts-serializer.svg)](https://badge.fury.io/js/%40witty-services%2Fts-serializer)
+![GitHub](https://img.shields.io/github/license/witty-services/ngx-serializer)
+![GitHub repo size](https://img.shields.io/github/repo-size/witty-services/ngx-serializer)
+![GitHub last commit](https://img.shields.io/github/last-commit/witty-services/ngx-serializer)
+![GitHub issues](https://img.shields.io/github/issues/witty-services/ngx-serializer)
+![GitHub top language](https://img.shields.io/github/languages/top/witty-services/ngx-serializer)
 
-## Development server
+## Summary
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* [Introduction](#introduction)
+* [Installation](#installation)
+* [How to use](#how-to-use)
 
-## Code scaffolding
+## Introduction
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+NgxSerializer is a angular wrapper of [TsSerializer](https://github.com/witty-services/ts-serializer) library. You can retrieve more documentation on TSSerializer library documentation.
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```shell script
+npm i @witty-services/ngx-serializer @witty-services/serializer-core
+```
 
-## Running unit tests
+## How to use
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```typescript
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    NgxSerializerModule.forRoot()
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {
+}
 
-## Running end-to-end tests
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  public constructor(serialize: NgxTsSerializerService) {
+    
+  }
+}
+```
