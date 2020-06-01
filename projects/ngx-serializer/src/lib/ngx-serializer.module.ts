@@ -12,15 +12,15 @@ export interface Config {
   normalizerConfiguration?: NormalizerConfiguration;
 }
 
-export function normalizerFactory(configuration: NormalizerConfiguration = null) {
+export function normalizerFactory(configuration: NormalizerConfiguration = null): Normalizer {
   return new Normalizer(configuration);
 }
 
-export function denormalizerFactory(configuration: NormalizerConfiguration = null) {
+export function denormalizerFactory(configuration: NormalizerConfiguration = null): Denormalizer {
   return new Denormalizer(configuration);
 }
 
-export function serializerFactory(normalizer: Normalizer, denormalizer: Denormalizer) {
+export function serializerFactory(normalizer: Normalizer, denormalizer: Denormalizer): NgxSerializerService {
   return new NgxSerializerService(normalizer, denormalizer);
 }
 

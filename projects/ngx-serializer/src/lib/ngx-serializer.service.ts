@@ -4,11 +4,11 @@ import {Serializer} from '@witty-services/ts-serializer';
 @Injectable()
 export class NgxSerializerService extends Serializer {
 
-  public deserialize<T>(type: { new(): T }, data: any): T {
+  public deserialize<T>(type: new() => T, data: any): T {
     return super.deserialize(type, data);
   }
 
-  public deserializeAll<T>(type: { new(): T }, data: any[]): T[] {
+  public deserializeAll<T>(type: new() => T, data: any[]): T[] {
     if (!Array.isArray(data)) {
       throw new Error(`${data} is not an array.`);
     }

@@ -20,8 +20,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngx-serializer/tsconfig.lib.json",
-              "projects/ngx-serializer/tsconfig.spec.json"
+              "projects/ngx-serializer/tsconfig.lib.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -97,12 +96,6 @@
             }
           }
         },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "ngx-serializer-app:build"
-          }
-        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -112,18 +105,6 @@
             "exclude": [
               "**/node_modules/**"
             ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "projects/ngx-serializer-app/e2e/protractor.conf.js",
-            "devServerTarget": "ngx-serializer-app:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "ngx-serializer-app:serve:production"
-            }
           }
         }
       }
