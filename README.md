@@ -1,6 +1,6 @@
 # NgxSerializer
 
-![ts-serializer-ci](https://github.com/witty-services/tngxserializer/workflows/build/badge.svg?branch=master)
+![ngx-serializer-ci](https://github.com/witty-services/ngxserializer/workflows/build/badge.svg?branch=master)
 [![npm version](https://badge.fury.io/js/%40witty-services%2Fts-serializer.svg)](https://badge.fury.io/js/%40witty-services%2Fts-serializer)
 ![GitHub](https://img.shields.io/github/license/witty-services/ngx-serializer)
 ![GitHub repo size](https://img.shields.io/github/repo-size/witty-services/ngx-serializer)
@@ -21,7 +21,7 @@ NgxSerializer is a angular wrapper of [TsSerializer](https://github.com/witty-se
 ## Installation
 
 ```shell script
-npm i @witty-services/ngx-serializer @witty-services/serializer-core
+npm i @witty-services/ngx-serializer @witty-services/ts-serializer
 ```
 
 ## How to use
