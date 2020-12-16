@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {NgxSerializerService} from '@witty-services/ngx-serializer';
 import {Library} from './model/library.model';
+import {Car} from './model/car.model';
 
 @Component({
   selector: 'app-root',
@@ -62,10 +63,27 @@ export class AppComponent {
        }
      ];
 
+     const vehicleData: any = [
+       {
+         name: 'Passat',
+         type: 'CAR',
+         seatingCapacity: 4
+       },
+       {
+         name: 'Renault Truck',
+         type: 'TRUCK',
+         payloadCapacity: 3
+       }
+     ];
+
      console.log(librariesData);
      const libraries: Library[] = serializer.deserializeAll(Library, librariesData);
 
      console.log(libraries);
      console.log(serializer.serializeAll(libraries));
+
+     console.log(vehicleData);
+     // console.log(serializer.deserializeAll(Vehicle, vehicleData));
+     console.log(new Car());
   }
 }

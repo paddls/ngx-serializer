@@ -14,16 +14,16 @@ jobs:
         node-version: [10.16.0]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Installation
-      run: npm ci
-    - name: Build
-      run: npm run build
-      env:
-        CI: true
-    - name: Linter
-      run: npm run lint
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Installation
+        run: npm ci
+      - name: Build
+        run: npm run build:ngx-serializer
+        env:
+          CI: true
+      - name: Linter
+        run: npm run lint

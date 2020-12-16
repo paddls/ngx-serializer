@@ -22,7 +22,7 @@ jobs:
       - name: Installation
         run: npm ci
       - name: Build
-        run: npm run build
+        run: npm run build:ngx-serializer
         env:
           CI: true
       - name: Linter

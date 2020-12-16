@@ -1,7 +1,7 @@
 # NgxSerializer
 
 ![ngx-serializer-ci](https://github.com/witty-services/ngx-serializer/workflows/build/badge.svg?branch=master)
-[![npm version](https://badge.fury.io/js/%40witty-services%2Fts-serializer.svg)](https://badge.fury.io/js/%40witty-services%2Fts-serializer)
+[![npm version](https://badge.fury.io/js/%40witty-services%2Fngx-serializer.svg)](https://badge.fury.io/js/%40witty-services%2Fngx-serializer)
 ![GitHub](https://img.shields.io/github/license/witty-services/ngx-serializer)
 ![GitHub repo size](https://img.shields.io/github/repo-size/witty-services/ngx-serializer)
 ![GitHub last commit](https://img.shields.io/github/last-commit/witty-services/ngx-serializer)
