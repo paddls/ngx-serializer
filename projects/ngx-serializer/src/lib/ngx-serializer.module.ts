@@ -1,5 +1,4 @@
 import {ModuleWithProviders, NgModule} from '@angular/core';
-import {NgxSerializerService} from './ngx-serializer.service';
 import {
   DEFAULT_NORMALIZER_CONFIGURATION,
   Denormalizer,
@@ -7,6 +6,7 @@ import {
   NormalizerConfiguration
 } from '@witty-services/ts-serializer';
 import {NORMALIZER_CONFIGURATION_TOKEN} from './ngx-serializer.module.di';
+import {NgxSerializerService} from './ngx-serializer.service';
 
 export interface Config {
   normalizerConfiguration?: NormalizerConfiguration;
@@ -18,10 +18,6 @@ export function normalizerFactory(configuration: NormalizerConfiguration = null)
 
 export function denormalizerFactory(configuration: NormalizerConfiguration = null): Denormalizer {
   return new Denormalizer(configuration);
-}
-
-export function serializerFactory(normalizer: Normalizer, denormalizer: Denormalizer): NgxSerializerService {
-  return new NgxSerializerService(normalizer, denormalizer);
 }
 
 @NgModule({
@@ -36,11 +32,7 @@ export function serializerFactory(normalizer: Normalizer, denormalizer: Denormal
       useFactory: denormalizerFactory,
       deps: [NORMALIZER_CONFIGURATION_TOKEN]
     },
-    {
-      provide: NgxSerializerService,
-      useFactory: serializerFactory,
-      deps: [Normalizer, Denormalizer]
-    }
+    NgxSerializerService
   ]
 })
 export class NgxSerializerModule {
