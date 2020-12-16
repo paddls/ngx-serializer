@@ -16,7 +16,7 @@
 
 ## Introduction
 
-NgxSerializer is a angular wrapper of [TsSerializer](https://github.com/witty-services/ts-serializer) library. You can retrieve more documentation on TSSerializer library documentation.
+NgxSerializer is an angular wrapper of [TsSerializer](https://github.com/witty-services/ts-serializer) library. You can retrieve more documentation on TSSerializer library documentation.
 
 ## Installation
 
