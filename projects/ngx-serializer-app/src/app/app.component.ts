@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {NgxSerializerService} from '@witty-services/ngx-serializer';
+import {Vehicle} from './model/vehicle.model';
 import {Library} from './model/library.model';
-import {Car} from './model/car.model';
 
 @Component({
   selector: 'app-root',
@@ -83,7 +83,6 @@ export class AppComponent {
      console.log(serializer.serializeAll(libraries));
 
      console.log(vehicleData);
-     // console.log(serializer.deserializeAll(Vehicle, vehicleData));
-     console.log(new Car());
+     console.log(serializer.deserializeAll(Vehicle, vehicleData));
   }
 }

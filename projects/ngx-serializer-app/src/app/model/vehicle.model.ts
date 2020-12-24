@@ -1,12 +1,10 @@
 import {JsonProperty, JsonSubTypes} from '@witty-services/ts-serializer';
 
-/* tslint:disable:no-use-before-declare */
-
 @JsonSubTypes<Vehicle>({
   field: 'type',
   types: {
-    CAR: Car,
-    TRUCK: Truck
+    CAR: () => Car,
+    TRUCK: () => Truck
   }
 })
 export abstract class Vehicle {
@@ -15,5 +13,14 @@ export abstract class Vehicle {
   public name: string;
 }
 
-import {Car} from './car.model';
-import {Truck} from './truck.model';
+export class Car extends Vehicle {
+
+  @JsonProperty()
+  public seatingCapacity: number;
+}
+
+export class Truck extends Vehicle {
+
+  @JsonProperty()
+  public payloadCapacity: number;
+}
