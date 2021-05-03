@@ -48,7 +48,7 @@ export class AppModule {
 })
 export class AppComponent {
 
-  public constructor(serialize: NgxTsSerializerService) {
+  public constructor(serialize: NgxSerializerService) {
     
   }
 }

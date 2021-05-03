@@ -1,10 +1,12 @@
-import {Injectable} from '@angular/core';
-import {Denormalizer, Normalizer, Serializer} from '@witty-services/ts-serializer';
+import {Inject, Injectable} from '@angular/core';
+import {IDeserializer, ISerializer, Serializer} from '@witty-services/ts-serializer';
+import {IDESERIALIZER_TOKEN, ISERIALIZER_TOKEN} from './ngx-serializer.module.di';
 
 @Injectable()
 export class NgxSerializerService extends Serializer {
 
-  public constructor(normalizer: Normalizer, denormalizer: Denormalizer) {
+  public constructor(@Inject(ISERIALIZER_TOKEN) normalizer: ISerializer,
+                     @Inject(IDESERIALIZER_TOKEN)  denormalizer: IDeserializer) {
     super(normalizer, denormalizer);
   }
 }

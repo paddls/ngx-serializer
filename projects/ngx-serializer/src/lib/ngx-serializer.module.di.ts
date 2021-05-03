@@ -1,4 +1,6 @@
 import {InjectionToken} from '@angular/core';
-import {NormalizerConfiguration} from '@witty-services/ts-serializer';
+import {NormalizerConfiguration, ISerializer, IDeserializer} from '@witty-services/ts-serializer';
 
 export const NORMALIZER_CONFIGURATION_TOKEN: InjectionToken<NormalizerConfiguration> = new InjectionToken<NormalizerConfiguration>('NORMALIZER_CONFIGURATION_TOKEN');
+export const ISERIALIZER_TOKEN: InjectionToken<ISerializer> = new InjectionToken<ISerializer>('ISERIALIZER_TOKEN');
+export const IDESERIALIZER_TOKEN: InjectionToken<IDeserializer> = new InjectionToken<IDeserializer>('IDESERIALIZER_TOKEN');

@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {NgxSerializerService} from '@witty-services/ngx-serializer';
-import {Vehicle} from './model/vehicle.model';
 import {Library} from './model/library.model';
 
 @Component({
@@ -26,13 +25,15 @@ export class AppComponent {
              title: 'Book 1.1',
              editor: {
                id: 'Editor 1'
-             }
+             },
+             type: 'novel'
            },
            {
              title: 'Book 1.2',
              editor: {
                id: 'Editor 2'
-             }
+             },
+             type: 'comic'
            }
          ]
        },
@@ -51,28 +52,17 @@ export class AppComponent {
              title: 'Book 2.1',
              editor: {
                id: 'Editor 2'
-             }
+             },
+             type: 'novel'
            },
            {
              title: 'Book 2.2',
              editor: {
                id: 'Editor 3'
-             }
+             },
+             type: 'novel'
            }
          ]
-       }
-     ];
-
-     const vehicleData: any = [
-       {
-         name: 'Passat',
-         type: 'CAR',
-         seatingCapacity: 4
-       },
-       {
-         name: 'Renault Truck',
-         type: 'TRUCK',
-         payloadCapacity: 3
        }
      ];
 
@@ -81,8 +71,5 @@ export class AppComponent {
 
      console.log(libraries);
      console.log(serializer.serializeAll(libraries));
-
-     console.log(vehicleData);
-     console.log(serializer.deserializeAll(Vehicle, vehicleData));
   }
 }

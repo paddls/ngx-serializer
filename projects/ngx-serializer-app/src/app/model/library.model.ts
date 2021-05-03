@@ -2,6 +2,8 @@ import {Identifiable} from './identifiable.model';
 import {Book} from './book.model';
 import {Address} from './address.model';
 import {DateConverter, JsonProperty} from '@witty-services/ts-serializer';
+import {Comic} from './comic.model';
+import {Novel} from './novel.model';
 
 export class Library extends Identifiable {
 
@@ -20,8 +22,8 @@ export class Library extends Identifiable {
   @JsonProperty({field: 'createdAt', customConverter: () => DateConverter})
   public createdAt: Date;
 
-  @JsonProperty(() => Book)
-  public books$: Book[];
+  @JsonProperty(() => [Comic, Novel])
+  public books: Book[];
 
   public constructor(data: Partial<Library> = {}) {
     super(data);

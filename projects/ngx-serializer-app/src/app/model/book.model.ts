@@ -1,7 +1,7 @@
 import {Identifiable} from './identifiable.model';
 import {JsonProperty} from '@witty-services/ts-serializer';
 
-export class Book extends Identifiable {
+export abstract class Book extends Identifiable {
 
   @JsonProperty('title')
   public title: string;
