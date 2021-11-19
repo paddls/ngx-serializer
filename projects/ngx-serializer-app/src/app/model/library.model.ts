@@ -7,7 +7,7 @@ import {Novel} from './novel.model';
 
 export class Library extends Identifiable {
 
-  @JsonProperty()
+  @JsonProperty({groups: 'justName'})
   public name: string;
 
   @JsonProperty({ field: 'addr', type: () => Address})

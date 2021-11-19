@@ -1,12 +1,12 @@
 {
   "name": "@witty-services/ngx-serializer",
-  "version": "1.0.5",
+  "version": "1.0.6-rc.0",
   "peerDependencies": {
     "@angular/common": ">=8.0.3-rc.0 || >=8.0.3",
     "@angular/core": ">=8.0.3-rc.0 || >=8.0.3"
   },
   "dependencies": {
-    "@witty-services/ts-serializer": ">=1.0.6-rc.0 || >=1.O.6"
+    "@witty-services/ts-serializer": ">=1.0.8-rc.0 || >=1.O.8"
   },
   "repository": {
     "type": "git",

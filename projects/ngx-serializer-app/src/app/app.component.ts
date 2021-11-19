@@ -9,7 +9,7 @@ import {Library} from './model/library.model';
 export class AppComponent {
 
   public constructor(serializer: NgxSerializerService) {
-     const librariesData: any = [
+    const librariesData: any = [
        {
          name: 'Library 1',
          addr: {
@@ -66,10 +66,15 @@ export class AppComponent {
        }
      ];
 
-     console.log(librariesData);
-     const libraries: Library[] = serializer.deserializeAll(Library, librariesData);
+    console.log(librariesData);
+    const libraries: Library[] = serializer.deserializeAll(Library, librariesData);
 
-     console.log(libraries);
-     console.log(serializer.serializeAll(libraries));
+    console.log(libraries);
+    console.log(serializer.serializeAll(libraries));
+
+    console.log('==== WITH GROUPS ====');
+
+    console.log(serializer.deserializeAll(Library, librariesData, {groups: 'justName'}));
+    console.log(serializer.serializeAll(libraries, {groups: 'justName'}));
   }
 }
