@@ -1,7 +1,7 @@
 import {Identifiable} from './identifiable.model';
 import {Book} from './book.model';
 import {Address} from './address.model';
-import {DateConverter, JsonProperty} from '@witty-services/ts-serializer';
+import {DateConverter, JsonProperty} from '@paddls/ts-serializer';
 import {Comic} from './comic.model';
 import {Novel} from './novel.model';
 

@@ -5,6 +5,6 @@
     "entryFile": "src/public-api.ts"
   },
   "whitelistedNonPeerDependencies": [
-    "@witty-services/ts-serializer"
+    "@paddls/ts-serializer"
   ]
 }

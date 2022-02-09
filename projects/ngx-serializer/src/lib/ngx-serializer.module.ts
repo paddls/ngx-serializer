@@ -6,7 +6,7 @@ import {
   ISerializer,
   Normalizer,
   NormalizerConfiguration
-} from '@witty-services/ts-serializer';
+} from '@paddls/ts-serializer';
 import {IDESERIALIZER_TOKEN, ISERIALIZER_TOKEN, NORMALIZER_CONFIGURATION_TOKEN} from './ngx-serializer.module.di';
 import {NgxSerializerService} from './ngx-serializer.service';
 

@@ -21,7 +21,7 @@ NgxSerializer is an angular wrapper of [TsSerializer](https://github.com/witty-s
 ## Installation
 
 ```shell script
-npm i @witty-services/ngx-serializer @witty-services/ts-serializer
+npm i @paddls/ngx-serializer @paddls/ts-serializer
 ```
 
 ## How to use

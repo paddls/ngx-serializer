@@ -1,21 +1,21 @@
 {
-  "name": "@witty-services/ngx-serializer",
-  "version": "1.0.6",
+  "name": "@paddls/ngx-serializer",
+  "version": "1.0.7-rc.0",
   "peerDependencies": {
     "@angular/common": ">=8.0.3-rc.0 || >=8.0.3",
     "@angular/core": ">=8.0.3-rc.0 || >=8.0.3"
   },
   "dependencies": {
-    "@witty-services/ts-serializer": ">=1.0.8-rc.0 || >=1.O.8"
+    "@paddls/ts-serializer": ">=1.0.10-rc.0 || >=1.O.10"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/witty-services/ngx-serializer.git"
+    "url": "git+https://github.com/paddls/ngx-serializer.git"
   },
   "author": "Thomas Nisole",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/witty-services/ngx-serializer/issues"
+    "url": "https://github.com/paddls/ngx-serializer/issues"
   },
-  "homepage": "https://github.com/witty-services/ngx-serializer#readme"
+  "homepage": "https://github.com/paddls/ngx-serializer#readme"
 }

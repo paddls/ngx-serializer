@@ -4,7 +4,7 @@
     "outDir": "../../out-tsc/app",
     "types": [],
     "paths": {
-      "@witty-services/ngx-serializer": [
+      "@paddls/ngx-serializer": [
         "projects/ngx-serializer/src/public-api.ts"
       ]
     }

@@ -1,4 +1,4 @@
-import {JsonProperty} from '@witty-services/ts-serializer';
+import {JsonProperty} from '@paddls/ts-serializer';
 
 export class Identifiable {
 

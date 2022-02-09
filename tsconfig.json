@@ -19,7 +19,7 @@
       "dom"
     ],
     "paths": {
-      "@witty-services/ngx-serializer": [
+      "@paddls/ngx-serializer": [
         "dist/ngx-serializer/ngx-serializer",
         "dist/ngx-serializer"
       ]

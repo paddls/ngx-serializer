@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NgxSerializerService} from '@witty-services/ngx-serializer';
+import {NgxSerializerService} from '@paddls/ngx-serializer';
 import {Library} from './model/library.model';
 
 @Component({
