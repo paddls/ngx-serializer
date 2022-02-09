@@ -1,12 +1,12 @@
 # NgxSerializer
 
-![ngx-serializer-ci](https://github.com/witty-services/ngx-serializer/workflows/build/badge.svg?branch=master)
-[![npm version](https://badge.fury.io/js/%40witty-services%2Fngx-serializer.svg)](https://badge.fury.io/js/%40witty-services%2Fngx-serializer)
-![GitHub](https://img.shields.io/github/license/witty-services/ngx-serializer)
-![GitHub repo size](https://img.shields.io/github/repo-size/witty-services/ngx-serializer)
-![GitHub last commit](https://img.shields.io/github/last-commit/witty-services/ngx-serializer)
-![GitHub issues](https://img.shields.io/github/issues/witty-services/ngx-serializer)
-![GitHub top language](https://img.shields.io/github/languages/top/witty-services/ngx-serializer)
+![ngx-serializer-ci](https://github.com/paddls/ngx-serializer/workflows/build/badge.svg?branch=master)
+[![npm version](https://badge.fury.io/js/%40paddls%2Fngx-serializer.svg)](https://badge.fury.io/js/%40paddls%2Fngx-serializer)
+![GitHub](https://img.shields.io/github/license/paddls/ngx-serializer)
+![GitHub repo size](https://img.shields.io/github/repo-size/paddls/ngx-serializer)
+![GitHub last commit](https://img.shields.io/github/last-commit/paddls/ngx-serializer)
+![GitHub issues](https://img.shields.io/github/issues/paddls/ngx-serializer)
+![GitHub top language](https://img.shields.io/github/languages/top/paddls/ngx-serializer)
 
 ## Summary
 
@@ -16,7 +16,7 @@
 
 ## Introduction
 
-NgxSerializer is an angular wrapper of [TsSerializer](https://github.com/witty-services/ts-serializer) library. You can retrieve more documentation on TSSerializer library documentation.
+NgxSerializer is an angular wrapper of [TsSerializer](https://github.com/paddls/ts-serializer) library. You can retrieve more documentation on TSSerializer library documentation.
 
 ## Installation
 
