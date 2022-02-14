@@ -1,6 +1,6 @@
 {
   "name": "@paddls/ngx-serializer",
-  "version": "1.0.8-rc.0",
+  "version": "1.0.8",
   "peerDependencies": {
     "@angular/common": ">=8.0.3-rc.0 || >=8.0.3",
     "@angular/core": ">=8.0.3-rc.0 || >=8.0.3"
