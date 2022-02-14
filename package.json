@@ -5,8 +5,7 @@
     "ng": "ng",
     "start": "ng serve --project ngx-serializer-app",
     "build:ngx-serializer": "ng build --project ngx-serializer && cp README.md dist/ngx-serializer",
-    "lint": "ng lint",
-    "publish:ngx-serializer": "npm run build:ngx-serializer && cd dist/ngx-serializer && npm publish --access=public"
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
