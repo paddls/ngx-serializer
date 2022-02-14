@@ -10,7 +10,7 @@
 
 ## Informations
 
-:warning: Since version 1.0.7, ```ngx-serializer``` and ```ts-serializer``` have been published under ```@paddls``` namespace. We continue to maintain ```@witty-services``` namespace, but now, ```ngx-serializer``` depends to ```@paddls/ts-serializer```
+> :warning: Since version 1.0.7, ```ngx-serializer``` and ```ts-serializer``` have been published under ```@paddls``` namespace. We continue to maintain ```@witty-services``` namespace, but now, ```ngx-serializer``` depends to ```@paddls/ts-serializer```
 
 ## Summary
 
