@@ -8,6 +8,10 @@
 ![GitHub issues](https://img.shields.io/github/issues/paddls/ngx-serializer)
 ![GitHub top language](https://img.shields.io/github/languages/top/paddls/ngx-serializer)
 
+## Informations
+
+:warning: Since version 1.0.7, ```ngx-serializer``` and ```ts-serializer``` have been published under ```@paddls``` namespace. We continue to maintain ```@witty-services``` namespace, but now, ```ngx-serializer``` depends to ```@paddls/ts-serializer```
+
 ## Summary
 
 * [Introduction](#introduction)
