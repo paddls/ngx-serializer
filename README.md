@@ -29,7 +29,7 @@ npm i @paddls/ngx-serializer @paddls/ts-serializer
 ```
 or
 ```shell script
-npm i @witty-services/ngx-serializer @witty-services/ts-serializer
+npm i @witty-services/ngx-serializer @paddls/ts-serializer
 ```
 
 ## How to use
