@@ -27,6 +27,10 @@ NgxSerializer is an angular wrapper of [TsSerializer](https://github.com/paddls/
 ```shell script
 npm i @paddls/ngx-serializer @paddls/ts-serializer
 ```
+or
+```shell script
+npm i @witty-services/ngx-serializer @witty-services/ts-serializer
+```
 
 ## How to use
 
@@ -53,7 +57,6 @@ export class AppModule {
 export class AppComponent {
 
   public constructor(serialize: NgxSerializerService) {
-    
   }
 }
 ```
