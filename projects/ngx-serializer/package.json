@@ -2,11 +2,12 @@
   "name": "@paddls/ngx-serializer",
   "version": "1.0.9",
   "peerDependencies": {
-    "@angular/common": ">=8.0.3-rc.0 || >=8.0.3",
-    "@angular/core": ">=8.0.3-rc.0 || >=8.0.3"
+    "@angular/common": ">= 13.0.0",
+    "@angular/core": ">= 13.0.0"
   },
   "dependencies": {
-    "@paddls/ts-serializer": ">=1.0.10-rc.0 || >=1.O.10"
+    "@paddls/ts-serializer": ">=1.0.10-rc.0 || >=1.O.10",
+    "tslib": "^2.3.0"
   },
   "repository": {
     "type": "git",
