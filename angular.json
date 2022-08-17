@@ -14,6 +14,11 @@
           "options": {
             "tsConfig": "projects/ngx-serializer/tsconfig.lib.json",
             "project": "projects/ngx-serializer/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-serializer/tsconfig.lib.prod.json"
+            }
           }
         },
         "lint": {

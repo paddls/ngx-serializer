@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --project ngx-serializer-app",
-    "build:ngx-serializer": "ng build --project ngx-serializer && cp README.md dist/ngx-serializer",
+    "build:ngx-serializer": "ng build --project ngx-serializer --configuration production && cp README.md dist/ngx-serializer",
     "lint": "ng lint"
   },
   "private": true,
