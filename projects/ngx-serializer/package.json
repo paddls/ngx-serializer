@@ -1,9 +1,9 @@
 {
   "name": "@paddls/ngx-serializer",
-  "version": "1.0.9",
+  "version": "2.0.0",
   "peerDependencies": {
-    "@angular/common": ">=8.0.3-rc.0 || >=8.0.3",
-    "@angular/core": ">=8.0.3-rc.0 || >=8.0.3"
+    "@angular/common": ">= 14.0.0",
+    "@angular/core": ">= 14.0.0"
   },
   "dependencies": {
     "@paddls/ts-serializer": ">=1.0.10-rc.0 || >=1.O.10"
