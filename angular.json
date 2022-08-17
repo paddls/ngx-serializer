@@ -10,20 +10,18 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ngx-serializer/tsconfig.lib.json",
             "project": "projects/ngx-serializer/ng-package.json"
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/ngx-serializer/tsconfig.lib.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/ngx-serializer/**/*.ts",
+              "projects/ngx-serializer/**/*.html"
             ]
           }
         }
@@ -48,7 +46,8 @@
             "main": "projects/ngx-serializer-app/src/main.ts",
             "polyfills": "projects/ngx-serializer-app/src/polyfills.ts",
             "tsConfig": "projects/ngx-serializer-app/tsconfig.app.json",
-            "aot": false,
+            "buildOptimizer": true,
+            "aot": true,
             "assets": [
               "projects/ngx-serializer-app/src/favicon.ico",
               "projects/ngx-serializer-app/src/assets"
@@ -69,7 +68,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -97,18 +95,19 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/ngx-serializer-app/tsconfig.app.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/ngx-serializer-app/**/*.ts",
+              "projects/ngx-serializer-app/**/*.html"
             ]
           }
         }
       }
     }
   },
-  "defaultProject": "ngx-serializer"
+  "defaultProject": "ngx-serializer",
+  "cli": {
+    "analytics": false
+  }
 }

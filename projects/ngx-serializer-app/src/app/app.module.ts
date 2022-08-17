@@ -1,7 +1,7 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {AppComponent} from './app.component';
-import {NgxSerializerModule} from '@paddls/ngx-serializer';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { NgxSerializerModule } from '@paddls/ngx-serializer';
 
 @NgModule({
   declarations: [
@@ -14,4 +14,5 @@ import {NgxSerializerModule} from '@paddls/ngx-serializer';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

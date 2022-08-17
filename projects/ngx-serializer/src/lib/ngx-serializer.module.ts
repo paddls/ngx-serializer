@@ -1,14 +1,7 @@
-import {ModuleWithProviders, NgModule} from '@angular/core';
-import {
-  DEFAULT_NORMALIZER_CONFIGURATION,
-  Denormalizer,
-  IDeserializer,
-  ISerializer,
-  Normalizer,
-  NormalizerConfiguration
-} from '@paddls/ts-serializer';
-import {IDESERIALIZER_TOKEN, ISERIALIZER_TOKEN, NORMALIZER_CONFIGURATION_TOKEN} from './ngx-serializer.module.di';
-import {NgxSerializerService} from './ngx-serializer.service';
+import { ModuleWithProviders, NgModule } from '@angular/core';
+import { DEFAULT_NORMALIZER_CONFIGURATION, Denormalizer, IDeserializer, ISerializer, Normalizer, NormalizerConfiguration } from '@paddls/ts-serializer';
+import { IDESERIALIZER_TOKEN, ISERIALIZER_TOKEN, NORMALIZER_CONFIGURATION_TOKEN } from './ngx-serializer.module.di';
+import { NgxSerializerService } from './ngx-serializer.service';
 
 export interface Config {
   normalizerConfiguration?: NormalizerConfiguration;
