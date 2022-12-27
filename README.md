@@ -10,7 +10,9 @@
 
 ## Informations
 
-> :warning: Since version 1.0.7, ```ngx-serializer``` and ```ts-serializer``` have been published under ```@paddls``` namespace. We continue to maintain ```@witty-services``` namespace, but now, ```ngx-serializer``` depends on ```@paddls/ts-serializer```
+> :warning: Since version 1.0.7, ```ngx-serializer``` and ```ts-serializer``` have been published under ```@paddls```
+> namespace. We continue to maintain ```@witty-services``` namespace, but now, ```ngx-serializer``` depends
+> on ```@paddls/ts-serializer```
 
 ## Summary
 
@@ -20,13 +22,13 @@
 
 ## Introduction
 
-NgxSerializer is an angular wrapper of [TsSerializer](https://github.com/paddls/ts-serializer) library. You can retrieve
-more documentation on TSSerializer library documentation.
+NgxSerializer is an angular wrapper of [ts-serializer](https://github.com/paddls/ts-serializer) library.
+You can get more infos on TS Serializer library documentation page.
 
 ## Installation
 
 ```shell script
-npm i @paddls/ngx-serializer @paddls/ts-serializer
+npm i @paddls/ngx-serializer
 ```
 
 ## How to use
