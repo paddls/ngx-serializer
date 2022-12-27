@@ -31,6 +31,14 @@ You can get more infos on TS Serializer library documentation page.
 npm i @paddls/ngx-serializer
 ```
 
+### Recommended Angular versions
+
+| `Angular`          | `NgxSerializer`   |
+|--------------------|-------------------|
+| `15.0.0` and above | `3.0.0` and above |
+| `14.0.0` and above | `2.0.0` and above |
+| `8.0.0` and above  | `1.0.0` and above |
+
 ## How to use
 
 ```typescript
