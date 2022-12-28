@@ -67,3 +67,5 @@ export class AppComponent {
   }
 }
 ```
+
+**You can also use `serialize`, `serializeAll`, `deserialize` and `deserializeAll` rxJS operators in your observables.**
