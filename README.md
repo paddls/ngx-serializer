@@ -35,6 +35,8 @@ npm i @paddls/ngx-serializer
 
 | `Angular`          | `NgxSerializer`   |
 |--------------------|-------------------|
+| `17.0.0` and above | `5.0.0` and above |
+| `16.0.0` and above | `4.0.0` and above |
 | `15.0.0` and above | `3.0.0` and above |
 | `14.0.0` and above | `2.0.0` and above |
 | `8.0.0` and above  | `1.0.0` and above |
