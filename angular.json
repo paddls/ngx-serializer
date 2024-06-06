@@ -44,14 +44,16 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ngx-serializer-app",
+            "outputPath": {
+              "base": "dist/ngx-serializer-app"
+            },
             "index": "projects/ngx-serializer-app/src/index.html",
-            "main": "projects/ngx-serializer-app/src/main.ts",
-            "polyfills": "projects/ngx-serializer-app/src/polyfills.ts",
+            "polyfills": [
+              "projects/ngx-serializer-app/src/polyfills.ts"
+            ],
             "tsConfig": "projects/ngx-serializer-app/tsconfig.app.json",
-            "buildOptimizer": true,
             "aot": true,
             "assets": [
               "projects/ngx-serializer-app/src/favicon.ico",
@@ -60,7 +62,8 @@
             "styles": [
               "projects/ngx-serializer-app/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "browser": "projects/ngx-serializer-app/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -76,8 +79,6 @@
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
