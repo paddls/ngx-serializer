@@ -57,9 +57,7 @@ export function provideNgxSerializer(config: Config = {}): Provider[] {
   ];
 }
 
-@NgModule({
-  providers: MODULE_PROVIDERS
-})
+@NgModule()
 export class NgxSerializerModule {
 
   public static injector: Injector;
@@ -69,20 +67,12 @@ export class NgxSerializerModule {
   }
 
   /**
-   * @deprecated Use provideNgxSerializer()
+   * @deprecated Use provideNgxSerializer() instead
    */
   public static forRoot(config: Config = {}): ModuleWithProviders<NgxSerializerModule> {
     return {
       ngModule: NgxSerializerModule,
-      providers: [
-        {
-          provide: NORMALIZER_CONFIGURATION_TOKEN,
-          useValue: {
-            ...DEFAULT_NORMALIZER_CONFIGURATION,
-            ...(config.normalizerConfiguration || {})
-          }
-        }
-      ]
+      providers: provideNgxSerializer(config)
     };
   }
 }
