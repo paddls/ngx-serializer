@@ -50,9 +50,7 @@
               "base": "dist/ngx-serializer-app"
             },
             "index": "projects/ngx-serializer-app/src/index.html",
-            "polyfills": [
-              "projects/ngx-serializer-app/src/polyfills.ts"
-            ],
+            "polyfills": [],
             "tsConfig": "projects/ngx-serializer-app/tsconfig.app.json",
             "aot": true,
             "assets": [
