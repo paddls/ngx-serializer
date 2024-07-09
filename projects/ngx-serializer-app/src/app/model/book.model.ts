@@ -1,5 +1,5 @@
 import { Identifiable } from './identifiable.model';
-import { JsonProperty } from '@paddls/ts-serializer';
+import { JsonProperty } from '@paddls/ngx-serializer';
 
 export abstract class Book extends Identifiable {
 

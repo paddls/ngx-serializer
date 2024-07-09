@@ -1,4 +1,4 @@
-import { JsonProperty } from '@paddls/ts-serializer';
+import { JsonProperty } from '@paddls/ngx-serializer';
 
 export class Identifiable {
 

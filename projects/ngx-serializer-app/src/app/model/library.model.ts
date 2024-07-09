@@ -1,7 +1,7 @@
 import { Identifiable } from './identifiable.model';
 import { Book } from './book.model';
 import { Address } from './address.model';
-import { DateConverter, JsonProperty } from '@paddls/ts-serializer';
+import { DateConverter, JsonProperty } from '@paddls/ngx-serializer';
 import { Comic } from './comic.model';
 import { Novel } from './novel.model';
 

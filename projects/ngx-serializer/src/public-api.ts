@@ -5,3 +5,5 @@ export { deserialize } from './lib/operators/deserialize.operator';
 export { deserializeAll } from './lib/operators/deserialize-all.operator';
 export { serialize } from './lib/operators/serialize.operator';
 export { serializeAll } from './lib/operators/serialize-all.operator';
+
+export * from '@paddls/ts-serializer';
