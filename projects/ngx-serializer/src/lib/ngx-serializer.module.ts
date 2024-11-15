@@ -1,4 +1,4 @@
-import {Injector, Provider, ModuleWithProviders, NgModule, APP_INITIALIZER} from '@angular/core';
+import { Injector, Provider, ModuleWithProviders, NgModule, APP_INITIALIZER, EnvironmentProviders, makeEnvironmentProviders } from '@angular/core';
 import { DEFAULT_NORMALIZER_CONFIGURATION, Denormalizer, IDeserializer, ISerializer, Normalizer, NormalizerConfiguration } from '@paddls/ts-serializer';
 import { IDESERIALIZER_TOKEN, ISERIALIZER_TOKEN, NORMALIZER_CONFIGURATION_TOKEN } from './ngx-serializer.module.di';
 import { NgxSerializerService } from './ngx-serializer.service';
@@ -44,8 +44,8 @@ const MODULE_PROVIDERS: Provider[] = [
   NgxSerializerService
 ];
 
-export function provideNgxSerializer(config: Config = {}): Provider[] {
-  return [
+export function provideNgxSerializer(config: Config = {}): EnvironmentProviders {
+  return makeEnvironmentProviders([
     {
       provide: NORMALIZER_CONFIGURATION_TOKEN,
       useValue: {
@@ -54,7 +54,7 @@ export function provideNgxSerializer(config: Config = {}): Provider[] {
       },
     },
     ...MODULE_PROVIDERS
-  ];
+  ]);
 }
 
 @NgModule()
@@ -72,7 +72,9 @@ export class NgxSerializerModule {
   public static forRoot(config: Config = {}): ModuleWithProviders<NgxSerializerModule> {
     return {
       ngModule: NgxSerializerModule,
-      providers: provideNgxSerializer(config)
+      providers: [
+        provideNgxSerializer(config)
+      ]
     };
   }
 }
