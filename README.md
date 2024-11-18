@@ -51,11 +51,9 @@ npm i @paddls/ngx-serializer
   ],
   imports: [
     BrowserModule,
-    NgxSerializerModule.forRoot() /** @deprecated */
+    NgxSerializerModule.forRoot()
   ],
-  providers: [
-    provideNgxSerializer()
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
