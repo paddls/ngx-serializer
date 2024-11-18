@@ -1,4 +1,4 @@
-import { Injector, ModuleWithProviders, NgModule } from '@angular/core';
+import {Injector, ModuleWithProviders, NgModule, Provider} from '@angular/core';
 import { DEFAULT_NORMALIZER_CONFIGURATION, Denormalizer, IDeserializer, ISerializer, Normalizer, NormalizerConfiguration } from '@paddls/ts-serializer';
 import { IDESERIALIZER_TOKEN, ISERIALIZER_TOKEN, NORMALIZER_CONFIGURATION_TOKEN } from './ngx-serializer.module.di';
 import { NgxSerializerService } from './ngx-serializer.service';
@@ -15,21 +15,21 @@ export function deserializerFactory(configuration: NormalizerConfiguration = nul
   return new Denormalizer(configuration);
 }
 
-@NgModule({
-  providers: [
-    {
-      provide: ISERIALIZER_TOKEN,
-      useFactory: serializerFactory,
-      deps: [NORMALIZER_CONFIGURATION_TOKEN]
-    },
-    {
-      provide: IDESERIALIZER_TOKEN,
-      useFactory: deserializerFactory,
-      deps: [NORMALIZER_CONFIGURATION_TOKEN]
-    },
-    NgxSerializerService
-  ]
-})
+const PROVIDERS: Provider[] = [
+  {
+    provide: ISERIALIZER_TOKEN,
+    useFactory: serializerFactory,
+    deps: [NORMALIZER_CONFIGURATION_TOKEN]
+  },
+  {
+    provide: IDESERIALIZER_TOKEN,
+    useFactory: deserializerFactory,
+    deps: [NORMALIZER_CONFIGURATION_TOKEN]
+  },
+  NgxSerializerService
+];
+
+@NgModule()
 export class NgxSerializerModule {
 
   private static injector: Injector;
@@ -46,7 +46,7 @@ export class NgxSerializerModule {
     return {
       ngModule: NgxSerializerModule,
       providers: [
-        NgxSerializerService,
+        ...PROVIDERS,
         {
           provide: NORMALIZER_CONFIGURATION_TOKEN,
           useValue: {
