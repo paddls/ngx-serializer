@@ -5,7 +5,6 @@ import { Library } from './model/library.model';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    standalone: false
 })
 export class AppComponent {
 
