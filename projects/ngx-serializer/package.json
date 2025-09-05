@@ -1,13 +1,13 @@
 {
   "name": "@paddls/ngx-serializer",
-  "version": "6.2.1",
+  "version": "7.0.0",
   "peerDependencies": {
-    "@angular/common": ">= 18.0.0",
-    "@angular/core": ">= 18.0.0",
+    "@angular/common": ">= 19.0.0",
+    "@angular/core": ">= 19.0.0",
     "rxjs": "^6.5.3 || ^7.4.0"
   },
   "dependencies": {
-    "@paddls/ts-serializer": ">=1.2.0"
+    "@paddls/ts-serializer": ">=1.3.0"
   },
   "repository": {
     "type": "git",

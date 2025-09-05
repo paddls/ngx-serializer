@@ -1,4 +1,4 @@
-import {Injector, ModuleWithProviders, NgModule, Provider} from '@angular/core';
+import { EnvironmentProviders, inject, Injector, makeEnvironmentProviders, ModuleWithProviders, NgModule, provideAppInitializer, Provider } from '@angular/core';
 import { DEFAULT_NORMALIZER_CONFIGURATION, Denormalizer, IDeserializer, ISerializer, Normalizer, NormalizerConfiguration } from '@paddls/ts-serializer';
 import { IDESERIALIZER_TOKEN, ISERIALIZER_TOKEN, NORMALIZER_CONFIGURATION_TOKEN } from './ngx-serializer.module.di';
 import { NgxSerializerService } from './ngx-serializer.service';
@@ -29,31 +29,39 @@ const PROVIDERS: Provider[] = [
   NgxSerializerService
 ];
 
+export function provideNgxSerializer(config?: Config): EnvironmentProviders {
+  return makeEnvironmentProviders([
+    provideAppInitializer(() => ((injector: Injector) => (): void => {
+      NgxSerializerModule.injector = injector;
+    })(inject(Injector))()),
+    ...PROVIDERS,
+    {
+      provide: NORMALIZER_CONFIGURATION_TOKEN,
+      useValue: {
+        ...DEFAULT_NORMALIZER_CONFIGURATION,
+        ...(config.normalizerConfiguration || {})
+      }
+    }
+  ]);
+}
+
 @NgModule()
 export class NgxSerializerModule {
 
-  private static injector: Injector;
-
-  public constructor(injector: Injector) {
-    NgxSerializerModule.injector = injector;
-  }
+  public static injector: Injector;
 
   public static getInjector(): Injector {
     return NgxSerializerModule.injector;
   }
 
+  /**
+   * @deprecated use provideNgxSerializer() instead
+   */
   public static forRoot(config: Config = {}): ModuleWithProviders<NgxSerializerModule> {
     return {
       ngModule: NgxSerializerModule,
       providers: [
-        ...PROVIDERS,
-        {
-          provide: NORMALIZER_CONFIGURATION_TOKEN,
-          useValue: {
-            ...DEFAULT_NORMALIZER_CONFIGURATION,
-            ...(config.normalizerConfiguration || {})
-          }
-        }
+        provideNgxSerializer(config)
       ]
     };
   }

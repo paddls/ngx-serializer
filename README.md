@@ -35,6 +35,7 @@ npm i @paddls/ngx-serializer
 
 | `Angular`          | `NgxSerializer`   |
 |--------------------|-------------------|
+| `19.0.0` and above | `7.0.0` and above |
 | `18.0.0` and above | `6.0.0` and above |
 | `17.0.0` and above | `5.0.0` and above |
 | `16.0.0` and above | `4.0.0` and above |
@@ -45,19 +46,11 @@ npm i @paddls/ngx-serializer
 ## How to use
 
 ```typescript
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    NgxSerializerModule.forRoot()
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule {
-}
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideNgxSerializer()
+  ]
+}).catch((err: Error) => console.error(err));
 
 @Component({
   selector: 'app-root',

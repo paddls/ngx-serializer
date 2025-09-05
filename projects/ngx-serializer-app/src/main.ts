@@ -1,12 +1,16 @@
 import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import 'zone.js'
-
-import { AppModule } from './app/app.module';
+import 'zone.js';
 import { environment } from './environments/environment';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
+import { provideNgxSerializer } from '../../ngx-serializer/src/lib/ngx-serializer.module';
 
 if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule).catch((err: Error) => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideNgxSerializer()
+  ]
+}).catch((err: Error) => console.error(err));
